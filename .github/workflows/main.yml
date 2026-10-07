@@ -1,1 +1,17 @@
+name: python external library
 
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    run-python-code:
+        runs-on: ubuntu
+
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v7
+
+            - name: run python
+              run: python data.py
